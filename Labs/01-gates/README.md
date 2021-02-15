@@ -47,7 +47,7 @@ end architecture dataflow;
  1 | 1 | 1 |    0
 
 ### 2)
-[logo]: https://github.com/FilipNim/Digital-electronics-1/Labs/01-gates/Images/1.png
+![and_gates](Images/1.PNG)
 
 ### 3)
 Link to EDA Playground: (https://www.edaplayground.com/x/BdXU)
@@ -83,7 +83,7 @@ end architecture dataflow;
 ```
 
 ### 2)
-[logo]: https://github.com/FilipNim/Digital-electronics-1/Labs/01-gates/Images/2.png
+![and_gates](Images/2.PNG)
 
 ### 3)
 Link to EDA Playground: https://www.edaplayground.com/x/Q48p
