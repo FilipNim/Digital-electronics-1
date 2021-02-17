@@ -1,4 +1,5 @@
-
+##1)
+ 
  | **Dec. equivalent** | **B[1:0]** | **A[1:0]** | **B is greater than A** | **B equals A** | **B is less than A** |
  | :-: | :-: | :-: | :-: | :-: | :-: |
  | 0 | 0 0 | 0 0 | 0 | 1 | 0 |
@@ -21,3 +22,7 @@
 equals_SoP = m0 + m5 + m10 +m15 = (/B1 * /B0 * /A1 * /A0) + (/B1 * B0 * /A1 * A0) + (B1 * /B0 * A1 * /A0) + (B1 * B0 * A1 * A0)
 
 less_PoS = M0 * M4 * M5 * M8 * M9 * M10 * M12 * M13 * M14 * M15 = (B1 + B0 + A1 + A0) * (B1 + /B0 + A1 + A0) * (B1 + /B0 + A1 + /A0) * (/B1 + B0 + A1 + A0) * (/B1 + B0 + A1 + /A0) * (/B1 + B0 + /A1 + A0) * (/B1 + /B0 + A1 + A0) * (/B1 + /B0 + A1 + /A0) * (/B1 + /B0 + /A1 + A0) * (/B1 + /B0 + /A1 + /A0)
+
+##2)
+
+greater_SoP_min = 
