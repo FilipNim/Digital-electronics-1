@@ -52,7 +52,7 @@ Link to EDA Playground: (https://www.edaplayground.com/x/cP9j)
 
 ## Assignment 3
 
-### 1)
+### 1) ```design.vhd```
 
 ```VHDL
 ------------------------------------------------------------------------
@@ -79,7 +79,7 @@ begin
 
 end architecture Behavioral;
 ```
-### 2)
+### 2) ```testbench.vhd```
 
 ```VHDL
 entity tb_comparator_4bit is
@@ -183,7 +183,7 @@ begin
     end process p_stimulus;
 end architecture testbench;
 ```
-### 3)
+### 3) simulator console output
 
 ```VHDL
 [2021-02-21 13:19:27 EST] ghdl -i design.vhd testbench.vhd  && ghdl -m  tb_comparator_4bit && ghdl -r  tb_comparator_4bit   --vcd=dump.vcd && sed -i 's/^U/X/g; s/^-/X/g; s/^H/1/g; s/^L/0/g' dump.vcd 
