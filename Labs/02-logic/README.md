@@ -28,5 +28,12 @@ less_PoS = M0 * M4 * M5 * M8 * M9 * M10 * M12 * M13 * M14 * M15 = (B1 + B0 + A1 
 ## Assignment 2
 
 ### 1)
+The K-map for the "equals" function is as follows:
+![equals](Images/equals.png)
 
+The K-map for the "less" function is as follows:
+![less](Images/less.png)
+
+The K-map for the "greater" function is as follows:
+![greater](Images/greater.png)
 greater_SoP_min = 
