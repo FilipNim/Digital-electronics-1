@@ -39,4 +39,14 @@ The K-map for the "less" function is as follows:
 The K-map for the "greater" function is as follows:
 
 ![greater](Images/greater.png)
-greater_SoP_min = 
+
+### 2)
+
+greater_SoP_min = (B1 * /A1) + (B0 * /A1 * /A0) + (B1 * B0 * /A0)
+
+less_PoS_min = (A1 + A0) * (/B1 + /B0) * (/B1 + A1) * (/B0 + A0) * (/B1 * A0)
+
+### 3)
+
+Link to EDA Playground: (https://www.edaplayground.com/x/cP9j)
+
