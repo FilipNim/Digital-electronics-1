@@ -185,7 +185,7 @@ end architecture testbench;
 ```
 ### 3)
 
-```
+```VHDL
 [2021-02-21 13:19:27 EST] ghdl -i design.vhd testbench.vhd  && ghdl -m  tb_comparator_4bit && ghdl -r  tb_comparator_4bit   --vcd=dump.vcd && sed -i 's/^U/X/g; s/^-/X/g; s/^H/1/g; s/^L/0/g' dump.vcd 
 analyze design.vhd
 analyze testbench.vhd
@@ -198,4 +198,9 @@ Finding VCD file...
 [2021-02-21 13:19:29 EST] Opening EPWave...
 Done
 ```
+### 4)
+
+Link to EDA Playground: (https://www.edaplayground.com/x/jbgd)
+
+
 
