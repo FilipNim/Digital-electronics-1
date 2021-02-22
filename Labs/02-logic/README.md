@@ -44,7 +44,7 @@ The K-map for the "greater" function is as follows:
 
 greater_SoP_min = (B1 * /A1) + (B0 * /A1 * /A0) + (B1 * B0 * /A0)
 
-less_PoS_min = (A1 + A0) * (/B1 + /B0) * (/B1 + A1) * (/B0 + A0) * (/B1 * A0)
+less_PoS_min = (A1 + A0) * (/B1 + /B0) * (/B1 + A1) * (/B0 + A0) * (/B1 + A0)
 
 ### 3)
 
