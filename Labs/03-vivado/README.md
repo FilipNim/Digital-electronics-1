@@ -2,4 +2,4 @@
 
 ## Assignment 1
 
-![nexys](Images/nexys7.png)
+![nexys](Images/Nexys7.png)
