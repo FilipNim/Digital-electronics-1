@@ -120,4 +120,4 @@ begin
 ```
 ### 3)
 
-![MUX](Images/MUX.png)
+![MUX](Images/MUX1.png)
