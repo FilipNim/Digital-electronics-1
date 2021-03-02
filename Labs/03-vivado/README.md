@@ -118,3 +118,6 @@ begin
     end process p_stimulus;
     end architecture testbench;
 ```
+### 3)
+
+![MUX](Images/MUX.png)
