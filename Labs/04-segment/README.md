@@ -29,7 +29,7 @@
 
 ## Assignment 2
 
-### 1)
+### 1) VHDL architecture from source file hex_7seg.vhd
 
 ```VHDL
 architecture Behavioral of hex_7seg is
@@ -75,7 +75,7 @@ p_7seg_decoder : process(hex_i)
 
 end architecture behavioral;
 ```
-### 2)
+### 2) VHDL stimulus process from testbench file tb_hex_7seg.vhd
 
 ```VHDL
 p_stimulus : process
@@ -121,11 +121,11 @@ p_stimulus : process
     end process p_stimulus;
 ```
 
-### 3)
+### 3) Screenshot with simulated time waveforms
 
 ![tb](Images/tb.png)
 
-### 4)
+### 4) Listing of VHDL code from source file top.vhd
 
 ```VHDL
   hex2seg : entity work.hex_7seg
@@ -142,7 +142,7 @@ p_stimulus : process
 ```
 ## Assignment 3
 
-### 1)
+### 1) Truth table and listing of VHDL code for LEDs(7:4)
 
 | **Hex** | **Inputs** | **LED4** | **LED5** | **LED6** | **LED7** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -191,6 +191,6 @@ LED(4) <= '1' when (SW = "0000") else '0';
               '1' when (SW = "1000") else '0';
 ```
 
-### 2)
+### 2) Screenshot with simulated time waveforms
 
 ![top](Images/top.png)
