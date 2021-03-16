@@ -91,7 +91,7 @@ clk_en0 : entity work.clock_enable
         )
         port map(
             clk => CLK100MHZ,
-            reset => BTC,
+            reset => BTNC,
             ce_o => s_en
             --- WRITE YOUR CODE HERE
         );
@@ -104,7 +104,7 @@ clk_en0 : entity work.clock_enable
         )
         port map(
             clk => CLK100MHZ,
-            reset => BTC,
+            reset => BTNC,
             en_i => s_en,
             cnt_up_i => SW(0),
             cnt_o    => s_cnt
