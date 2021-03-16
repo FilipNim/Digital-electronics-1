@@ -127,4 +127,8 @@ clk_en0 : entity work.clock_enable
             seg_o(0) => CG
         );
 ```
-### 2)
+### 2) 4-bit bidirectional counter and a 16-bit counter
+
+![top4](Images/top4.png)
+
+![top16](Images/top16.png)
