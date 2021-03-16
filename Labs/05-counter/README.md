@@ -4,7 +4,7 @@
 
 ### 1) Connection of push buttons on Nexys A7 board
 
-![switches](Images/switches.png)
+![buttons](Images/buttons.png)
 
 ### 2) 
 
@@ -21,3 +21,58 @@
 
 ### 1) VHDL code of the process p_cnt_up_down
 
+```VHDL
+p_cnt_up_down : process(clk)
+    begin
+        if rising_edge(clk) then
+        
+            if (reset = '1') then               -- Synchronous reset
+                s_cnt_local <= (others => '0'); -- Clear all bits
+
+            elsif (en_i = '1') then 
+                
+                
+               if (cnt_up_i = '1') then                    
+                   s_cnt_local <= s_cnt_local + 1;
+                   
+               else 
+                   s_cnt_local <= s_cnt_local + 1;        
+
+             end if;
+
+           end if;
+       end if;
+       
+ end process p_cnt_up_down;
+```
+### 2) VHDL code of the process p_cnt_up_down
+
+```VHDL
+ p_reset_gen : process
+    begin
+        s_reset <= '0';
+        wait for 12 ns;
+        s_reset <= '1';                 -- Reset activated
+        wait for 73 ns;
+        s_reset <= '0';
+        wait;
+    end process p_reset_gen;
+
+    --------------------------------------------------------------------
+    -- Data generation process
+    --------------------------------------------------------------------
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+
+        s_en     <= '1';                -- Enable counting
+        s_cnt_up <= '1';
+        wait for 380 ns;                -- Change counter direction
+        s_cnt_up <= '0';
+        wait for 220 ns;
+        s_en     <= '0';                -- Disable counting
+
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+    ```
