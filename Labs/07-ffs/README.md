@@ -597,4 +597,4 @@ p_clk_gen : process
 ## Assignment 4
 
 ### Image of the shift register schematic
-![rovnice](Images/rovnice.png)
+![shiftreg](Images/shiftreg.png)
