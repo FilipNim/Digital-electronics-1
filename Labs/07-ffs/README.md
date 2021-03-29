@@ -8,7 +8,7 @@
  
  ### 2) Tables for D, JK, T flip-flops
 
-   | **clk** | **D** | **Qn** | **Q(n+1)** | **Comments** |
+   | **clk** | **d** | **qn** | **q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-: | :-: |
    | ↑ | 0 | 0 | 0 | No change |
    | ↑ | 0 | 1 | 0 | No change |
@@ -16,7 +16,7 @@
    | ↑ | 1 | 1 | 1 | q(n+1) |
 
 
-   | **clk** | **J** | **K** | **Qn** | **Q(n+1)** | **Comments** |
+   | **clk** | **j** | **k** | **qn** | **q(n+1)** | **Comments** |
    | :-:| :-: | :-: | :-: | :-: | :-- |
    | ↑ | 0 | 0 | 0 | 0 | No change |
    | ↑ | 0 | 0 | 1 | 1 | No change |
@@ -28,7 +28,7 @@
    | ↑ | 1 | 1 | 1 | 0 | Toggle |
 
 
-   | **clk** | **T** | **Qn** | **Q(n+1)** | **Comments** |
+   | **clk** | **t** | **qn** | **q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-: | :-- |
    | ↑ | 0 | 0 | 1 | No change |
    | ↑ | 0 | 1 | 0 | No change |
