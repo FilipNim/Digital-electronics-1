@@ -593,3 +593,8 @@ p_clk_gen : process
 #### Screenshot with simulated time waveforms
 
 ![t_ff_rst](Images/t_ff_rst.png)
+
+## Assignment 4
+
+### Image of the shift register schematic
+![rovnice](Images/rovnice.png)
