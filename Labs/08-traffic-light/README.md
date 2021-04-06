@@ -142,3 +142,4 @@ p_output_fsm : process(s_state)
 ```
 ### 4) Screenshot of the simulation
 
+![tlc](Images/tlc.png)
