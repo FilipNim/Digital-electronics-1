@@ -150,7 +150,7 @@ p_output_fsm : process(s_state)
 
 | **States** | **South Direction** | **West Direction** | **No Cars (00)** | **Cars to West (01)** | **Cars to South (10)** | **Cars Both Direction (11)** |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| `go South` | `Green` | `Red` | `go South` | `wait South` | `go South` | `wait South` |
-| `wait South`| `Yellow` | `Red` | `go West` | `go West` | `go West` | `go West` |
-| `go West` | `Red` | `Green` | `go West` | `go West` | `wait West` | `wait West` |
-| `wait West` | `Red` | `Yellow` | `go South` | `go South` | `go South` | `go South` |
+| go South | Green | Red | go South | wait South | go South | wait South |
+| wait South| Yellow | Red | go West | go West | go West | go West |
+| go West | Red | Green | go West` | go West | wait West | wait West |
+| wait West | Red | Yellow | go South | go South | go South | go South |
