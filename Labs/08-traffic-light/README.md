@@ -152,5 +152,68 @@ p_output_fsm : process(s_state)
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | go South | Green | Red | go South | wait South | go South | wait South |
 | wait South| Yellow | Red | go West | go West | go West | go West |
-| go West | Red | Green | go West` | go West | wait West | wait West |
+| go West | Red | Green | go West | go West | wait West | wait West |
 | wait West | Red | Yellow | go South | go South | go South | go South |
+
+### 2) State diagram
+
+![diagram1](Images/diagram1.png)
+
+### 3) VHDL code of sequential process p_smart_traffic_fsm
+
+```VHDL
+p_smart_traffic_fsm : process(clk)
+    begin
+        if rising_edge(clk) then
+            if (reset = '1') then       -- Synchronous reset
+                s_state <= WEST_GO ;      -- Set initial state
+                s_cnt   <= c_ZERO;      -- Clear all bits
+
+            elsif (s_en = '1') then
+                -- Every 250 ms, CASE checks the value of the s_state 
+                -- variable and changes to the next state according 
+                -- to the delay value.
+                case s_state is
+
+                    -- If the current state is STOP1, then wait 1 sec
+                    -- and move to the next GO_WAIT state.
+                    ---------------------
+                   when WEST_GO =>
+                        if (s_cnt < c_DELAY_4SEC and (sensor = "00" or sensor = "01")) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            s_state <= WEST_WAIT;
+                            s_cnt <= c_ZERO;
+                        end if;
+                        
+                   when WEST_WAIT =>
+                        if (s_cnt < c_DELAY_2SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            s_state <= SOUTH_GO;
+                            s_cnt <= c_ZERO;
+                        end if; 
+                        
+                   when SOUTH_GO =>
+                        if (s_cnt < c_DELAY_4SEC and (sensor = "00" or sensor = "10")) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            s_state <= SOUTH_WAIT;
+                            s_cnt <= c_ZERO; 
+                        end if;
+                        
+                   when SOUTH_WAIT =>
+                        if (s_cnt < c_DELAY_2SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            s_state <= WEST_GO;
+                            s_cnt <= c_ZERO; 
+                        end if; 
+                    
+                    when others =>
+                        s_state <= WEST_GO;
+                end case;
+            end if; 
+        end if;
+    end process p_smart_traffic_fsm;
+```
